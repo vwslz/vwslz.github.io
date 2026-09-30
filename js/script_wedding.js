@@ -199,8 +199,8 @@
     }
 
     // Open around the wedding as the natural entry point into the story.
-    const entryId = window.location.hash.slice(1) || "married";
-    const entryCard = document.getElementById(entryId);
+    const entryId = window.location.hash.slice(1);
+    const entryCard = entryId && document.getElementById(entryId);
     if (entryCard) {
       window.requestAnimationFrame(() => window.requestAnimationFrame(() => {
         focusEvent(entryId, "instant");

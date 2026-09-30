@@ -1,0 +1,88 @@
+#pink-float-player {
+  position: fixed;
+  top: 50%;
+  left: -80px;
+  transform: translateY(-50%);
+  width: 160px;
+  height: 160px;
+  background: #f0dde2;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(180, 140, 155, 0.3);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+  transition: left 0.35s ease, width 0.35s ease, height 0.35s ease, border-radius 0.35s ease;
+  font-family: 'Georgia', 'Songti SC', serif;
+  overflow: hidden;
+}
+
+#pink-float-player.expanded {
+  left: 20px;
+  width: 300px;
+  height: auto;
+  border-radius: 18px;
+  padding: 12px;
+  cursor: default;
+}
+
+#pink-float-player .tab-icon {
+  margin-right: 18px;
+  color: #9c6b7a;
+  flex-shrink: 0;
+}
+
+#pink-float-player.expanded .tab-icon {
+  display: none;
+}
+
+#pink-float-player .player-inner {
+  display: none;
+  width: 100%;
+}
+
+#pink-float-player.expanded .player-inner {
+  display: block;
+}
+
+#pink-float-player .player-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 4px 8px;
+  cursor: default;
+}
+
+#pink-float-player .now-playing-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #9c6b7a;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+#pink-float-player #pink-float-close {
+  background: none;
+  border: none;
+  color: #9c6b7a;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 4px;
+}
+
+#pink-float-player .player-frame {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fdfaf8;
+}
+
+#pink-float-player .player-frame iframe {
+  display: block;
+  width: 100%;
+  border: none;
+}
