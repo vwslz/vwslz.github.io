@@ -1,59 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<!-- Google Font -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
-
-  <!-- Stylesheets -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link href="/lib/fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
-	<link rel="stylesheet" href="css/animate.css"/>
-  <!-- Bootstrap Gallery Template
-  @link https://colorlib.com/wp/free-bootstrap-gallery-templates/}
-  @author colorlib
-  @version 1.0-->
-  <link rel="stylesheet" href="css/colorlib.css"/>
-  <link rel="stylesheet" href="css/progress.css"/>
-	<link rel="stylesheet" href="css/style.css"/>
-
-	<link rel="stylesheet" href="css/style_wedding.css">
-
-  <title>Wedding</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f3ed">
+  <meta name="description" content="A living album of Hui and Yimin's story, from the first hello to the day they said I do.">
+  <title>辉 &amp; 旻 — 时光碎片</title>
+  <link rel="stylesheet" href="css/style_wedding.css">
+  <script defer src="js/wedding-data.js"></script>
+  <script defer src="js/script_wedding.js"></script>
 </head>
+<body class="timeline-page">
+  <header class="site-header">
+    <a class="wordmark" href="wedding.html" aria-label="Hui and Yimin, home">H <span>&amp;</span> Y</a>
+    <p class="header-note">时光碎片</p>
+    <a class="back-link" href="map.html">山河渐明</a>
+  </header>
 
-<body>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">INFJ x INFP</p>
+      <h1 id="page-title">Hui <span class="ampersand">&amp;</span> Yimin</h1>
+      <p class="chinese-names chinese-display" lang="zh-Hans">陈辉 <span aria-hidden="true">&amp;</span> 朱亦旻</p>
+      <p class="intro-copy">
+        <span class="relationship-counter" id="relationship-counter" data-start="2026-05-20T00:00:00" role="timer" aria-live="off">Calculating…</span>
+        <span class="chinese-copy chinese-display" lang="zh-Hans">“许个愿，我会帮你实现愿望。”</span>
+        <span class="chinese-copy chinese-display" lang="zh-Hans">“我希望和你一起坠入爱河。”</span>
+      </p>
+      <a class="back-link relationship-counter-link" href="map.html">山河渐明 →</a>
+      <a class="text-link relationship-counter-link" href="#timeline">
+        时光碎片 <span class="text-link-arrow" aria-hidden="true">↓</span>
+      </a>
+    </section>
 
-	<div class="container">
-    <h1 class="wedding-title">Hui Chen <span>&</span> Yimin Zhu's Wedding</h1>
-    <h1 class="wedding-title"><a href="https://m.douyu.com/12848894?fromuid=678851746&share_source=4">直播链接 / Live Link</a></h1>
-    <div id="pixel-canvas"></div>
-    <div class="location-label">May 20th 17:15 p.m. @ Las Vegas</div>
-  </div>
+    <nav class="highlights" aria-label="Story highlights">
+      <span class="highlights-label">Highlights</span>
+      <div id="highlight-links" class="highlight-links"></div>
+    </nav>
 
-  <div class="overlay"></div>
+    <section class="story-section" id="timeline" aria-labelledby="timeline-title">
+      <div class="section-heading">
+        <p class="eyebrow">Our journey together as</p>
+        <h2 id="timeline-title">咏叹调组</h2>
+        <p class="section-note">我的计划是一直自由，直到遇到一个人胜过我独活。</p>
+      </div>
+      <p class="scroll-hint" aria-hidden="true"><span>←</span> Earlier <span class="hint-dot">·</span> Later <span>→</span></p>
+      <div class="timeline-viewport" id="timeline-viewport" tabindex="0" aria-label="Chronological relationship timeline. Scroll horizontally on desktop or vertically on mobile.">
+        <div class="timeline-track" id="timeline-track"></div>
+      </div>
+    </section>
+  </main>
 
-	<!--====== Javascripts & Jquery ======-->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="js/<bootstrap.bundle.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.nicescroll.min.js"></script>
-	<script src="js/isotope.pkgd.min.js"></script>
-	<script src="js/imagesloaded.pkgd.min.js"></script>
-	<script src="js/circle-progress.min.js"></script>
-	<script src="js/colorlib.js"></script>
-
-  <script src="js/progressbar.js"></script>
-  <script src="js/progress.js"></script>
-	<script src="js/main.js"></script>
-
-	<script src="js/script_wedding.js"></script>
-
-	</body>
+  <footer class="site-footer">
+    <span class="footer-flower" aria-hidden="true">✳</span>
+    <p>With love, Hui &amp; Yimin</p>
+    <a href="#" target="_blank" rel="noopener">Wedding Memories<span aria-hidden="true">↗</span></a>
+  </footer>
+</body>
 </html>

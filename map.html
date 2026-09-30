@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f3ed">
+  <meta name="description" content="A map of the places Hui and Yimin have visited together.">
+  <title>Our places in North America — Hui &amp; Yimin</title>
+  <link rel="stylesheet" href="css/style_wedding.css">
+  <link rel="stylesheet" href="css/map_wedding.css?v=north-america-1">
+  <script defer src="js/wedding-data.js"></script>
+  <script defer src="js/us-state-geometry.js?v=states-4"></script>
+  <script defer src="js/canada-province-geometry.js?v=statscan-2016"></script>
+  <script defer src="js/north-america-geometry.js?v=natural-earth-110m"></script>
+  <script defer src="js/map_wedding.js?v=north-america-1"></script>
+</head>
+<body class="places-page">
+  <header class="site-header">
+    <a class="wordmark" href="wedding.html" aria-label="Hui and Yimin, home">H <span>&amp;</span> Y</a>
+    <a class="back-link" href="map.html">山河渐明</a>
+    <a class="header-note" href="wedding.html">← 时光碎片</a>
+  </header>
+  <main class="places-main">
+    <section class="places-intro" aria-labelledby="places-title">
+      <p class="eyebrow">执子之手，与子偕老</p>
+      <h1 id="places-title">山河<em>远阔</em></h1>
+      <p>人间烟火</p>
+    </section>
+    <section class="places-section" aria-label="North America map of our visited places">
+      <div class="map-caption"><span>OUR PLACES</span><span id="map-place-count">Loading places</span></div>
+      <section class="region-section" aria-labelledby="us-map-title">
+        <div class="region-heading"><h2 id="us-map-title">United States</h2><p>Darker pink means more visits · select a state to explore</p></div>
+        <div class="region-map-layout" id="us-map-layout">
+          <div class="region-tiles region-tiles--us" id="us-state-map" role="group" aria-label="All 50 United States"></div>
+          <aside class="region-card" id="us-state-card" hidden aria-live="polite"><button class="region-card-close" type="button" aria-label="Close region details">×</button><h3></h3><div class="region-card-events"></div></aside>
+        </div>
+      </section>
+      <section class="region-section" aria-labelledby="canada-map-title">
+        <div class="region-heading"><h2 id="canada-map-title">Canada</h2><p>Visited provinces and territories · select to explore</p></div>
+        <div class="region-map-layout" id="canada-map-layout">
+          <div class="region-tiles region-tiles--canada" id="canada-province-map" role="group" aria-label="Canadian provinces and territories"></div>
+          <aside class="region-card" id="canada-province-card" hidden aria-live="polite"><button class="region-card-close" type="button" aria-label="Close province details">×</button><h3></h3><div class="region-card-events"></div></aside>
+        </div>
+      </section>
+      <div class="map-stage" id="map-stage">
+<svg class="world-map" id="world-map" viewBox="240 5 520 281" preserveAspectRatio="xMidYMid meet" role="group" aria-label="Interactive North America map with U.S. states and Canadian provinces and territories">
+<defs><linearGradient id="map-water" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5ebe8"/><stop offset="1" stop-color="#f8f3ed"/></linearGradient><clipPath id="map-bounds"><rect width="1000" height="500"/></clipPath></defs>
+<rect class="map-ocean" width="1000" height="500" fill="url(#map-water)"/>
+<g class="map-graticule" clip-path="url(#map-bounds)" aria-hidden="true"><path d="M0 100H1000"/><path d="M0 200H1000"/><path d="M0 300H1000"/><path d="M0 400H1000"/><path d="M0 500H1000"/><path d="M278 0V500"/><path d="M444 0V500"/><path d="M611 0V500"/><path d="M778 0V500"/><path d="M944 0V500"/></g>
+<g class="map-countries" id="map-countries" aria-hidden="true"></g>
+<g class="map-state-regions" id="map-state-regions" aria-label="Select a U.S. state or Canadian province"></g>
+</svg>
+        <div class="map-zoom-controls" role="group" aria-label="Map zoom controls">
+          <button type="button" id="map-zoom-in" aria-label="Zoom in">+</button>
+          <button type="button" id="map-zoom-out" aria-label="Zoom out">−</button>
+          <button type="button" id="map-zoom-reset" aria-label="Reset map zoom">Reset</button>
+        </div>
+        <aside class="region-card map-state-card" id="map-state-card" hidden aria-live="polite"><button class="region-card-close" type="button" aria-label="Close region details">×</button><h3></h3><div class="region-card-events"></div></aside>
+        <aside class="map-card" id="map-card" hidden aria-live="polite">
+          <p class="eyebrow map-card-date" id="map-card-date"></p>
+          <p class="map-card-story" id="map-card-story"></p>
+          <h2 id="map-card-place"></h2>
+          <ul class="map-card-events" id="map-card-events" hidden></ul>
+          <a class="map-card-link" id="map-card-link" href="#">More <span aria-hidden="true">↗</span></a>
+        </aside>
+        <p class="map-hint" id="map-hint">Drag to move · zoom to explore North America · select a state or province to see our memories.</p>
+      </div>
+      <p class="map-data-note" id="map-data-note">Every state and province has its own outline; darker pink shows more shared visits.</p>
+      <p class="map-attribution">Boundaries: <a href="https://open.canada.ca/data/en/dataset/a883eb14-0c0e-45c4-b8c4-b54c4a819edb">Statistics Canada</a> · <a href="https://www.naturalearthdata.com/downloads/110m-cultural-vectors/">Natural Earth</a></p>
+    </section>
+  </main>
+  <footer class="site-footer map-footer">
+    <span class="footer-flower" aria-hidden="true">✳</span>
+    <p>With love, Hui &amp; Yimin</p>
+    <a href="wedding.html">Return to our story <span aria-hidden="true">↗</span></a>
+  </footer>
+</body>
+</html>
